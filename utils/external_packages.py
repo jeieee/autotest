@@ -612,7 +612,8 @@ class AtForkPackage(ExternalPackage):
 #   hex_sum = '5baa64c73e966b57fa797040585c760c502dc70b'
 #   jeieee added the new download link below. 20171026
     urls = ('http://rs3.cc/files/' + local_filename,)
-    hex_sum = '868dace98201cf8a920287c6186f135c1ec70cb0'
+#   hex_sum = '868dace98201cf8a920287c6186f135c1ec70cb0'
+    hex_sum = '775f56b0010678434b86b24aa7846750becd6f48'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
     _build_and_install_current_dir = (
