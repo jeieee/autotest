@@ -608,8 +608,11 @@ class MatplotlibPackage(ExternalPackage):
 class AtForkPackage(ExternalPackage):
     version = '0.1.2'
     local_filename = 'atfork-%s.zip' % version
-    urls = ('http://python-atfork.googlecode.com/files/' + local_filename,)
-    hex_sum = '5baa64c73e966b57fa797040585c760c502dc70b'
+#   urls = ('http://python-atfork.googlecode.com/files/' + local_filename,)
+#   hex_sum = '5baa64c73e966b57fa797040585c760c502dc70b'
+#   jeieee added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/' + local_filename,)
+    hex_sum = '868dace98201cf8a920287c6186f135c1ec70cb0'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
     _build_and_install_current_dir = (
@@ -701,7 +704,10 @@ class GwtPackage(ExternalPackage):
 
     version = '2.7.0'
     local_filename = 'gwt-%s.zip' % version
-    urls = ('http://goo.gl/t7FQSn',)
+#   urls = ('http://goo.gl/t7FQSn',)
+#   hex_sum = '2688f2ed80a36ba0e6170a4ef656581d811f330f'
+#   jrr@ieee.org added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/gwt-2.7.0.zip',)
     hex_sum = '2688f2ed80a36ba0e6170a4ef656581d811f330f'
     name = 'gwt'
     about_filename = 'about.txt'
