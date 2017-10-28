@@ -528,10 +528,12 @@ class SetuptoolsPackage(ExternalPackage):
 class MySQLdbPackage(ExternalPackage):
     module_name = 'MySQLdb'
     version = '1.2.2'
-    urls = ('http://downloads.sourceforge.net/project/mysql-python/'
-            'mysql-python/%(version)s/MySQL-python-%(version)s.tar.gz'
-            % dict(version=version),)
     local_filename = 'MySQL-python-%s.tar.gz' % version
+#   urls = ('http://downloads.sourceforge.net/project/mysql-python/'
+#           'mysql-python/%(version)s/MySQL-python-%(version)s.tar.gz'
+#           % dict(version=version),)
+#   jeieee added the new download link below. 20171027
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
     hex_sum = '945a04773f30091ad81743f9eb0329a3ee3de383'
 
     _build_and_install_current_dir = (
@@ -550,7 +552,9 @@ class DjangoPackage(ExternalPackage):
     minimum_version = '1.3'
     version = '1.5.1'
     local_filename = 'Django-%s.tar.gz' % version
-    urls = ('http://www.djangoproject.com/download/%s/tarball/' % version,)
+#   urls = ('http://www.djangoproject.com/download/%s/tarball/' % version,)
+#   jeieee added the new download link below. 20171027
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
     hex_sum = '0ab97b90c4c79636e56337f426f1e875faccbba1'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
@@ -567,8 +571,10 @@ class DjangoPackage(ExternalPackage):
 class NumpyPackage(ExternalPackage):
     version = '1.2.1'
     local_filename = 'numpy-%s.tar.gz' % version
-    urls = ('http://downloads.sourceforge.net/project/numpy/NumPy/%(version)s/'
-            'numpy-%(version)s.tar.gz' % dict(version=version),)
+#   urls = ('http://downloads.sourceforge.net/project/numpy/NumPy/%(version)s/'
+#           'numpy-%(version)s.tar.gz' % dict(version=version),)
+#   jeieee added the new download link below. 20171027
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
     hex_sum = '1aa706e733aea18eaffa70d93c0105718acb66c5'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
@@ -580,8 +586,11 @@ class PsUtilPackage(ExternalPackage):
     minimum_version = '0.4.0'
     version = '1.0.1'
     local_filename = 'psutil-%s.tar.gz' % version
-    urls = ("https://psutil.googlecode.com/files/%s" % local_filename,)
-    hex_sum = '3d3abb8b7a5479b7299a8d170ec25179410f24d1'
+#   urls = ("https://psutil.googlecode.com/files/%s" % local_filename,)
+#   jeieee added the new download link below. 20171027
+#   hex_sum = '3d3abb8b7a5479b7299a8d170ec25179410f24d1'
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
+    hex_sum = '638939364150f78ad1e624d5c8d72a07be6ae3ec'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
     _build_and_install_current_dir = (
@@ -594,8 +603,10 @@ class MatplotlibPackage(ExternalPackage):
     version = '0.98.5.3'
     short_version = '0.98.5'
     local_filename = 'matplotlib-%s.tar.gz' % version
-    urls = ('http://downloads.sourceforge.net/project/matplotlib/matplotlib/'
-            'matplotlib-%s/matplotlib-%s.tar.gz' % (short_version, version),)
+#   urls = ('http://downloads.sourceforge.net/project/matplotlib/matplotlib/'
+#           'matplotlib-%s/matplotlib-%s.tar.gz' % (short_version, version),)
+#   jeieee added the new download link below. 20171027
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
     hex_sum = '2f6c894cf407192b3b60351bcc6468c0385d47b6'
     os_requirements = {'/usr/include/ft2build.h': 'libfreetype6-dev',
                        '/usr/include/png.h': 'libpng12-dev'}
@@ -623,9 +634,12 @@ class AtForkPackage(ExternalPackage):
 class ParamikoPackage(ExternalPackage):
     version = '1.7.5'
     local_filename = 'paramiko-%s.tar.gz' % version
-    urls = ('http://www.lag.net/paramiko/download/' + local_filename,
-            'ftp://mirrors.kernel.org/gentoo/distfiles/' + local_filename,)
-    hex_sum = '592be7a08290070b71da63a8e6f28a803399e5c5'
+#   urls = ('http://www.lag.net/paramiko/download/' + local_filename,
+#           'ftp://mirrors.kernel.org/gentoo/distfiles/' + local_filename,)
+#   hex_sum = '592be7a08290070b71da63a8e6f28a803399e5c5'
+#   jeieee added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/' + local_filename,)
+    hex_sum = '122f08f4f99fdf439e30c393dcb40c58d2b81e6f'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
 
@@ -660,8 +674,10 @@ class ParamikoPackage(ExternalPackage):
 class SimplejsonPackage(ExternalPackage):
     version = '2.0.9'
     local_filename = 'simplejson-%s.tar.gz' % version
-    urls = ('http://pypi.python.org/packages/source/s/simplejson/' +
-            local_filename,)
+#   urls = ('http://pypi.python.org/packages/source/s/simplejson/' +
+#           local_filename,)
+#   jeieee added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/' + local_filename,)
     hex_sum = 'b5b26059adbe677b06c299bed30557fcb0c7df8c'
 
     _build_and_install = ExternalPackage._build_and_install_from_package
@@ -672,8 +688,10 @@ class SimplejsonPackage(ExternalPackage):
 class AexpectPackage(ExternalPackage):
     version = '1.0.0'
     local_filename = 'aexpect-%s.tar.gz' % version
-    urls = ('http://pypi.python.org/packages/source/a/aexpect/' +
-            local_filename,)
+#   urls = ('http://pypi.python.org/packages/source/a/aexpect/' +
+#           local_filename,)
+#   jeieee added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/' + local_filename,)
     hex_sum = '5a1752dd26b4653f8c4ee413455e86879e47c269'
 
     def _get_installed_version_from_module(self, module):
@@ -687,8 +705,11 @@ class AexpectPackage(ExternalPackage):
 class Httplib2Package(ExternalPackage):
     version = '0.6.0'
     local_filename = 'httplib2-%s.tar.gz' % version
-    urls = ('http://httplib2.googlecode.com/files/' + local_filename,)
+#   urls = ('http://httplib2.googlecode.com/files/' + local_filename,)
     hex_sum = '995344b2704826cc0d61a266e995b328d92445a5'
+#   jeieee added the new download link below. 20171026
+    urls = ('http://rs3.cc/files/' + local_filename,)
+    hex_sum = '507c47f05a072270e0964bc9ba5e09232fc80a17'
 
     def _get_installed_version_from_module(self, module):
         # httplib2 doesn't contain a proper version
