@@ -477,9 +477,12 @@ class SetuptoolsPackage(ExternalPackage):
     # try to install the latest found on the upstream.
     minimum_version = '0.6'
     version = '0.6c11'
-    urls = ('http://pypi.python.org/packages/source/s/setuptools/'
-            'setuptools-%s.tar.gz' % (version,),)
     local_filename = 'setuptools-%s.tar.gz' % version
+#   urls = ('http://pypi.python.org/packages/source/s/setuptools/'
+#           'setuptools-%s.tar.gz' % (version,),)
+#   hex_sum = '8d1ad6384d358c547c50c60f1bfdb3362c6c4a7d'
+#   jeieee added the new download link below. 20171103
+    urls = ('http://rs3.cc/files/%s' % local_filename,)
     hex_sum = '8d1ad6384d358c547c50c60f1bfdb3362c6c4a7d'
 
     SUDO_SLEEP_DELAY = 15
